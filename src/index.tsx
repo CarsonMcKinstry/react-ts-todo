@@ -4,7 +4,13 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { TodoContextProvider } from './components/Todos/TodoContext';
+
+ReactDOM.render(
+  <TodoContextProvider>
+    <App />
+  </TodoContextProvider>,
+  document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
